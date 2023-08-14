@@ -5,7 +5,7 @@ Welcome to this repository, my working playground for exploring transformer arch
 Currently, I am training a custom bigram language model, inspired by the transformative transformer architectures and guided by the insights provided in Andrej Karpathy's video tutorial "Let's build GPT: from scratch, in code, spelled out." The model's primary aim is to understand and reproduce the unique writing style of Machado de Assis, a renowned Brazilian writer, who wrote in Portuguese but had work translated into dozens of languages. In this project we will use Machado's work in Portuguese. 
 
 ### Initial Results
-The first foray into training this model was using a CPU. Admittedly, the results were less than stellar. Here's an example of text generated on 14/08:
+The first foray into training this model was using a CPU. Admittedly, the results were less than stellar. Here's an example of text generated on August 14th 2023:
 
 ```
 Sample:

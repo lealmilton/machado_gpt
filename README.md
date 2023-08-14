@@ -1,6 +1,38 @@
 # Bigram Language Model trained on Machado de Assis's full work
 ## Overview
-This project uses a custom bigram language model, inspired by the transformer architectures as described in Andrej Karpathy's video tutorial "Let's build GPT: from scratch, in code, spelled out." The model is trained on the full literary works of Machado de Assis, a renowned Brazilian writer. The objective is to comprehend and generate text in the author's style based on a provided context.
+Welcome to this repository, my working playground for exploring transformer architectures during my undergraduate thesis. Transformer architectures, with their ability to handle sequential data in various domains, have gained significant traction in the field of deep learning. Their applications span from language modeling, machine translation, to even image classification tasks.
+
+Currently, I am training a custom bigram language model, inspired by the transformative transformer architectures and guided by the insights provided in Andrej Karpathy's video tutorial "Let's build GPT: from scratch, in code, spelled out." The model's primary aim is to understand and reproduce the unique writing style of Machado de Assis, a renowned Brazilian writer, who wrote in Portuguese but had work translated into dozens of languages. In this project we will use Machado's work in Portuguese. 
+
+### Initial Results
+The first foray into training this model was using a CPU. Admittedly, the results were less than stellar. Here's an example of text generated on 14/08:
+
+```
+Sample:
+
+ag pqi,litiandiuera anrado dasostbdela maSa. demant.má cpCelanqro áo, o pa oqicteitora s dou dve ábO, Qo.s dam  c-io edomoo,.;o 
+su than mr e aooamesto, as uobttoc erão dia a ca as Oa vorras  que omoa má orTiio $r litzã, áreocêr 7cntu ha aMmbepae o e dG.mo 
+cítguão a, Ha to peua
+iá Piaruquce
+elolatet$ Ûa g dto óque preqo ào, e;o.b sameio+e tio puãaca
+
+gca eçhe sieso
+ ool de o, eopeammoand? dmacosma
+ m5anoitá deemT addaEspOte,tiubo e,
+ vÉe qarro.
+ia a dar doosoéj ols
+ (ncoré m e putoa ggu? ntoos. om , as t lea
+```
+
+While these initial generations may appear disjointed and nonsensical, they mark the beginning of this exploration. I believe in the potential of this model, and my journey will involve refining and improving it.
+
+### Moving Forward
+I plan on experimenting with GPUs to accelerate the training process and hope to enhance the model's performance significantly. With the power of parallel processing that GPUs offer, I expect to see more coherent text generations and faster convergence.
+
+#### Timeline of Generations
+14/08: (as shown above)
+Future dates will be added as the model is trained and refined further.
+Each update in this timeline will serve as a testament to the advancements made, and I hope to witness the transformative power of deep learning as this project evolves.
 
 ## Dataset
 File Location: all.txt

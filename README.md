@@ -1,8 +1,8 @@
-# Bigram Language Model trained on Machado de Assis's full work
+# GPT Transformer Model trained on Machado de Assis's full work
 ## Overview
 Welcome to this repository, my working playground for exploring transformer architectures during my undergraduate thesis. Transformer architectures, with their ability to handle sequential data in various domains, have gained significant traction in the field of deep learning. Their applications span from language modeling, machine translation, to even image classification tasks.
 
-Currently, I am training a custom bigram language model, inspired by the transformative transformer architectures and guided by the insights provided in Andrej Karpathy's video tutorial "Let's build GPT: from scratch, in code, spelled out." The model's primary aim is to understand and reproduce the unique writing style of Machado de Assis, a renowned Brazilian writer, who wrote in Portuguese but had work translated into dozens of languages. In this project we will use Machado's work in Portuguese. 
+Currently, I am training a custom GPT language model, inspired by the transformative transformer architectures and guided by the insights provided in Andrej Karpathy's video tutorial "Let's build GPT: from scratch, in code, spelled out." The model's primary aim is to understand and reproduce the unique writing style of Machado de Assis, a renowned Brazilian writer, who wrote in Portuguese but had work translated into dozens of languages. In this project we will use Machado's work in Portuguese. 
 
 ### Initial Results
 The first foray into training this model was using a CPU. Admittedly, the results were less than stellar. Here's an example of text generated on August 14th 2023:
@@ -83,7 +83,7 @@ max_iters: 10000
 
 ### Model Training:
 
-From your terminal, aftere activating the environment, just run:
+From your terminal, after activating the environment, just run:
 
 ```bash
 python train.py

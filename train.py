@@ -2,16 +2,16 @@ import torch
 import torch.nn as nn
 from torch.nn import functional as F
 
-batch_size = 8
-context_len = 64
-max_iters = 100
+batch_size = 16
+context_len = 128
+max_iters = 10000
 eval_interval = 25  # evaluate the model every n iterations
 learning_rate = 1e-4
 device = "cuda" if torch.cuda.is_available() else "cpu"
 eval_iters = 5  # evaluate the model n times
-n_embd = 36
-n_head = 4
-n_layer = 4
+n_embd = 32
+n_head = 8
+n_layer = 12
 dropout = 0.2
 torch.manual_seed(42)
 
@@ -119,7 +119,7 @@ class Block(nn.Module):
         return x
 
 
-class BigramLanguageModel(nn.Module):
+class GPTLanguageModel(nn.Module):
     def __init__(self):
         super().__init__()
         self.token_embedding_table = nn.Embedding(vocab_size, n_embd)
@@ -160,7 +160,7 @@ class BigramLanguageModel(nn.Module):
         return idx
 
 
-model = BigramLanguageModel()
+model = GPTLanguageModel()
 m = model.to(device)
 optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
 

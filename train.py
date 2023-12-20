@@ -1,19 +1,22 @@
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
+import wandb
 
-batch_size = 16
-context_len = 128
-max_iters = 10000
-eval_interval = 25  # evaluate the model every n iterations
-learning_rate = 1e-4
-device = "cuda" if torch.cuda.is_available() else "cpu"
-eval_iters = 5  # evaluate the model n times
-n_embd = 32
-n_head = 8
-n_layer = 12
-dropout = 0.2
 torch.manual_seed(42)
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
+batch_size = 128
+context_len = 64
+n_embd = 128
+n_head = 32
+n_layer = 16
+learning_rate = 1e-3
+dropout = 0.5
+eval_interval = 1000
+eval_iters = 200
+max_iters = 20000
 
 with open("processed/all.txt", "r", encoding="utf-8") as f:
     text = f.read()
@@ -29,7 +32,6 @@ data = torch.tensor(encode(text), dtype=torch.long)
 n = int(0.9 * len(data))
 train_data = data[:n]
 val_data = data[n:]
-
 
 def get_batch(split):
     data = train_data if split == "train" else val_data
